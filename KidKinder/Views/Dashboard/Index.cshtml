@@ -1,0 +1,256 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<html lang="en">
+<head>
+    <title>KidKinder Admin Paneli</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="keywords" content="flat ui, admin Admin , Responsive, Landing, Bootstrap, App, Template, Mobile, iOS, Android, apple, creative app">
+    <meta name="author" content="Codedthemes" />
+    <!-- Favicon icon -->
+    <link rel="icon" href="~/Templates/material_able-main/assets/images/favicon.ico" type="image/x-icon">
+    <!-- Google font-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+    <!-- Required Fremwork -->
+    <link rel="stylesheet" type="text/css" href="~/Templates/material_able-main/assets/css/bootstrap/css/bootstrap.min.css">
+    <!-- waves.css -->
+    <link rel="stylesheet" href="~/Templates/material_able-main/assets/pages/waves/css/waves.min.css" type="text/css" media="all">
+    <!-- themify-icons line icon -->
+    <link rel="stylesheet" type="text/css" href="~/Templates/material_able-main/assets/icon/themify-icons/themify-icons.css">
+    <!-- feather icon -->
+    <link rel="stylesheet" type="text/css" href="~/Templates/material_able-main/assets/icon/feather/css/feather.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" type="text/css" href="~/Templates/material_able-main/assets/icon/font-awesome/css/font-awesome.min.css">
+    <!-- Style.css -->
+    <link rel="stylesheet" type="text/css" href="~/Templates/material_able-main/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="~/Templates/material_able-main/assets/css/jquery.mCustomScrollbar.css">
+</head>
+<body>
+
+
+
+    <div class="pcoded-inner-content">
+        <!-- Main-body start -->
+        <div class="main-body">
+            <div class="page-wrapper">
+                <!-- Page-body start -->
+                <div class="page-body">
+                    <div class="row">
+
+                        <div class="col-xl-4 col-md-12">
+                            <div class="card mat-clr-stat-card text-white bg-c-blue ">
+                                <div class="card-block">
+                                    <div class="row">
+                                        <div class="col-3 text-center bg-c-blue">
+                                            <i class="fas fa-star mat-icon f-24"></i>
+                                        </div>
+                                        <div class="col-9 cst-cont">
+                                            <h5>@ViewBag.AvgPrice ₺</h5>
+                                            <p class="m-b-0">Ortalama Fiyat</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card mat-clr-stat-card bg-c-red">
+                                <div class="card-block">
+                                    <div class="row">
+                                        <div class="col-3 text-center bg-c-red">
+                                            <i class="fas fa-trophy mat-icon f-24"></i>
+                                        </div>
+                                        <div class="col-9 cst-cont">
+                                            <h5>@ViewBag.BranchCount</h5>
+                                            <p class="m-b-0">Branş Sayısı</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-xl-4 col-md-12">
+                            <div class="card mat-clr-stat-card  bg-c-orenge ">
+                                <div class="card-block">
+                                    <div class="row">
+                                        <div class="col-3 text-center bg-c-orenge">
+                                            <i class="fas fa-star mat-icon f-24"></i>
+                                        </div>
+                                        <div class="col-9 cst-cont">
+                                            <h5>@ViewBag.CizimSınıfı</h5>
+                                            <p class="m-b-0">Çizim Sınıfı Öğrenci Sayısı</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card mat-clr-stat-card text-white bg-c-green">
+                                <div class="card-block">
+                                    <div class="row">
+                                        <div class="col-3 text-center bg-c-green">
+                                            <i class="fas fa-trophy mat-icon f-24"></i>
+                                        </div>
+                                        <div class="col-9 cst-cont">
+                                            <h5>@ViewBag.ToplamMevcut</h5>
+                                            <p class="m-b-0">Toplam Öğrenci Sayısı</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-4 col-md-12">
+                            <div class="card mat-clr-stat-card text-white bg-c-yellow ">
+                                <div class="card-block">
+                                    <div class="row">
+                                        <div class="col-3 text-center bg-c-yellow">
+                                            <i class="fas fa-star mat-icon f-24"></i>
+                                        </div>
+                                        <div class="col-9 cst-cont">
+                                            <h5>@ViewBag.TeacherCount</h5>
+                                            <p class="m-b-0">Öğretmen Sayısı</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card mat-clr-stat-card bg-c-lite-green ">
+                                <div class="card-block">
+                                    <div class="row">
+                                        <div class="col-3 text-center bg-c-lite-green">
+                                            <i class="fas fa-trophy mat-icon f-24"></i>
+                                        </div>
+                                        <div class="col-9 cst-cont">
+                                            <h5>@ViewBag.BigClassroom</h5>
+                                            <p class="m-b-0">En Kalabalık Sınıf</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="pcoded-inner-content">
+        <!-- Main-body start -->
+        <div class="main-body">
+            <div class="page-wrapper">
+                <!-- Page-body start -->
+                <div class="page-body">
+                    <div class="row">
+                        <div class="col-xl-6 col-md-12">
+                            <div class="card table-card">
+
+                                @Html.Action("TeacherList", "Dashboard")
+                            </div>
+                        </div>
+
+
+                        <div class="col-xl-6 col-md-12">
+                            <div class="row">
+                                <!-- sale card start -->
+
+
+                                <div class="col-md-6">
+                                    <div class="card bg-c-red total-card">
+                                        <div class="card-block">
+                                            <div class="text-left">
+                                                <h4>@ViewBag.ServiceCount</h4>
+                                                <p class="m-0">Toplam Hizmet Sayısı</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card bg-c-green total-card">
+                                        <div class="card-block">
+                                            <div class="text-left">
+                                                <h4>@ViewBag.ReferanceCount</h4>
+                                                <p class="m-0">Referans Sayısı</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="card bg-c-lite-green total-card">
+                                        <div class="card-block">
+                                            <div class="container bg-light">
+                                                <canvas id="myChart" style="width:70%;max-width:100%"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                            </div>
+                        </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="~/Templates/material_able-main/assets/js/jquery/jquery.min.js "></script>
+    <script type="text/javascript" src="~/Templates/material_able-main/assets/js/jquery-ui/jquery-ui.min.js "></script>
+    <script type="text/javascript" src="~/Templates/material_able-main/assets/js/popper.js/popper.min.js"></script>
+    <script type="text/javascript" src="~/Templates/material_able-main/assets/js/bootstrap/js/bootstrap.min.js "></script>
+    <!-- waves js -->
+    <script src="~/Templates/material_able-main/assets/pages/waves/js/waves.min.js"></script>
+    <!-- jquery slimscroll js -->
+    <script type="text/javascript" src="~/Templates/material_able-main/assets/js/jquery-slimscroll/jquery.slimscroll.js"></script>
+    <script src="~/Templates/material_able-main/assets/js/pcoded.min.js"></script>
+    <script src="~/Templates/material_able-main/assets/js/vertical/vertical-layout.min.js"></script>
+    <script src="~/Templates/material_able-main/assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <!-- Custom js -->
+    <script type="text/javascript" src="~/Templates/material_able-main/assets/js/script.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="~/Templates/material_able-main/assets/css/font-awesome-n.min.css">
+    <link rel="stylesheet" type="text/css" href="~/Templates/material_able-main/assets/css/font-awesome.min.css">
+
+
+    
+
+
+
+   
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+    </script>
+
+
+    <script>
+    const xValues = ["","Çizim Sınıfı", "Dil Sınıfı", "Temel Bilimler"];
+    const yValues = [1,@ViewBag.CizimSınıfı, @ViewBag.DilSınıfı, @ViewBag.BilimSınıfı];
+    const barColors = ["white","blue", "green", "yellow"];
+
+    new Chart("myChart", {
+        type: "line",
+        data: {
+            labels: xValues,
+            datasets: [{
+                backgroundColor: barColors,
+                data: yValues
+            }]
+        },
+        options: {
+            legend: { display: false },
+            title: {
+                display: true,
+                text: "Grafik"
+            }
+        }
+    });
+    </script>
+
+</body>
+</html>

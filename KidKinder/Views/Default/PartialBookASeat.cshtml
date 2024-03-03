@@ -1,0 +1,61 @@
+﻿@model KidKinder.Entities.BookASeat
+
+<div class="container-fluid py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-7 mb-5 mb-lg-0">
+                <p class="section-title pr-5">
+                    <span class="pr-2">Bir Sandalye Ayırın</span>
+                </p>
+                <h1 class="mb-4">Hemen Kaydolun</h1>
+                <p>
+                    Sınıflarımızın kontenjanları sınırlıdır çocuklarınız için aşağıda listelediğimiz sınıflardan
+                    bir veya birden fazla tercih yapabilirsiniz, erken kayıt indirimlerini kaçırmayın.
+                </p>
+                @Html.Action("PartialAboutList", "Default")
+
+                <a href="" class="btn btn-primary mt-4 py-2 px-4">Şimdi Kaydolun</a>
+            </div>
+            <div class="col-lg-5">
+                <div class="card border-0">
+                    <div class="card-header bg-secondary text-center p-4">
+                        <h1 class="text-white m-0">Bir Sınıf Seçin</h1>
+                    </div>
+                    <div class="card-body rounded-bottom bg-primary p-5">
+                        <form method="post">
+                            <div class="form-group">
+                                <input type="text"
+                                       name="Name"
+                                       class="form-control border-0 p-4"
+                                       placeholder="Adınız"
+                                       required="required" />
+                            </div>
+                            <div class="form-group">
+                                <input type="email"
+                                       name="Email"
+                                       class="form-control border-0 p-4"
+                                       placeholder="Email"
+                                       required="required" />
+                            </div>
+                            <div class="form-group">
+                                <select name="Class" class="custom-select border-0 px-4"
+                                        style="height: 47px">
+                                    <option selected>Sınıf Seç</option>
+                                    <option value="Çizim Sınıfı">Çizim Sınıfı</option>
+                                    <option value="Dil Sınıfı">Dil Sınıfı</option>
+                                    <option value="Temel Bilimler">Temel Bilimler</option>
+                                </select>
+                            </div>
+                            <div>
+                                <button class="btn btn-secondary btn-block border-0 py-3"
+                                        type="submit">
+                                    Şimdi Kaydol
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,119 @@
+﻿@model List<KidKinder.Entities.ClassRoom>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="page-header">
+    <div class="page-block">
+        <div class="row align-items-center">
+            <div class="col-md-8">
+                <div class="page-header-title">
+                    <h5 class="m-b-10">KidKinder Admin Paneli</h5>
+                    <p class="m-b-0">Uygulamanın yeni veri girişi, güncelleme, silme ve diğer işlemlerin yapıldığı sayfadır.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="index.html"> <i class="fa fa-home"></i> </a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="#!">Sınıf Listesi</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="pcoded-inner-content">
+    <!-- Main-body start -->
+    <div class="main-body">
+        <div class="page-wrapper">
+            <!-- Page-body start -->
+            <div class="page-body">
+                <div class="card">
+                    <div class="card-header">
+                        <h5>Sınıf Listesi Tablosu</h5>
+                        <span>Sınıf ile İlgili İşlemleri Burdan Yapabilirsiniz</span>
+                        <div class="card-header-right">
+                            <ul class="list-unstyled card-option">
+                                <li><i class="fa fa fa-wrench open-card-option"></i></li>
+                                <li><i class="fa fa-window-maximize full-card"></i></li>
+                                <li><i class="fa fa-minus minimize-card"></i></li>
+                                <li><i class="fa fa-refresh reload-card"></i></li>
+                                <li><i class="fa fa-trash close-card"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-block table-border-style">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Sıra No</th>
+                                        <th>Sınıflar</th>
+                                        <th>Çocuk Yaşları</th>
+                                        <th>Kontenjan</th>
+                                        <th>Ders Saati</th>
+                                        <th>Ücret</th>
+                                        <th>Resim URL</th>
+                                        <th>Açıklama</th>
+                                        <th>İşlem</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @{int sirano = 0;}
+                                    @foreach (var x in Model)
+                                    {
+                                        <tr>
+                                            <td>@{sirano++;} @sirano</td>
+                                            <td>@x.Title</td>
+                                            <td>@x.AgeOfKids</td>
+                                            <td>@x.TotalSeats</td>
+                                            <td>@x.ClassTime</td>
+                                            <td>@x.Price</td>
+                                            <td><img src="@x.ImageUrl" alt="user image" class="img-radius img-40 align-top m-r-15"></td>
+                                            <td>@x.Description</td>
+                                            <td>
+                                                <a style="width:100px;" class="btn btn-info btn-sm" href="/ClassRoom/UpdateClassRoom/@x.ClassRoomId">
+                                                   
+                                                    Düzenle
+                                                </a>
+                                                <a class="btn btn-danger btn-sm" href="/ClassRoom/DeleteClassRoom/@x.ClassRoomId">
+                                                   
+                                                    Sil
+                                                </a>
+
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                        <a href="/ClassRoom/CreateClassRoom/" class="btn btn-primary">Yeni Sınıf Ekle</a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

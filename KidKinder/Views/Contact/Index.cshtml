@@ -1,0 +1,48 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+@Html.Action("PartialHead", "Default")
+
+<body>
+
+    @Html.Action("PartialNavbar", "Default")
+
+
+    @Html.Action("ContactHeaderPartial", "Contact")
+    <!-- Header End -->
+    <!-- Contact Start -->
+    <div class="container-fluid pt-5">
+        <div class="container">
+            <div class="text-center pb-2">
+                <p class="section-title px-5">
+                    <span class="px-2">İletişim</span>
+                </p>
+                <h1 class="mb-4">Sorularınız İçin Bizimle İletişime Geçin</h1>
+            </div>
+            <div class="row">
+                <div class="col-lg-7 mb-5">
+                    <div class="contact-form">
+                        <div id="success"></div>
+                        @Html.Action("CreateMessage", "Contact")
+                    </div>
+                </div>
+
+                @Html.Action("ContactAddressPartial", "Contact")
+            </div>
+        </div>
+    </div>
+
+
+    @Html.Action("PartialFooter", "Default")
+
+    @Html.Action("PartialScript", "Default")
+</body>
+</html>
+

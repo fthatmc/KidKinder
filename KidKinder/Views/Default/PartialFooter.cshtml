@@ -1,0 +1,94 @@
+﻿@model List<KidKinder.Entities.Address>
+
+<div class="container-fluid bg-secondary text-white mt-5 py-5 px-sm-3 px-md-5">
+    @foreach (var x in Model)
+    {
+        <div class="row pt-5">
+            <div class="col-lg-3 col-md-6 mb-5">
+                <a href=""
+                   class="navbar-brand font-weight-bold text-primary m-0 mb-4 p-0"
+                   style="font-size: 40px; line-height: 40px">
+                    <i class="flaticon-043-teddy-bear"></i>
+                    <span class="text-white">KidKinder</span>
+                </a>
+                <p>
+                    @x.Description
+                </p>
+                <div class="d-flex justify-content-start mt-4">
+                    <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0"
+                       style="width: 38px; height: 38px"
+                       href="#">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0"
+                       style="width: 38px; height: 38px"
+                       href="#">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0"
+                       style="width: 38px; height: 38px"
+                       href="#">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0"
+                       style="width: 38px; height: 38px"
+                       href="#">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h3 class="text-primary mb-4">Bize Ulaşın</h3>
+                <div class="d-flex">
+                    <h4 class="fa fa-map-marker-alt text-primary"></h4>
+                    <div class="pl-3">
+                        <h5 class="text-white">Adres</h5>
+                        <p>@x.AddressDetail</p>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <h4 class="fa fa-envelope text-primary"></h4>
+                    <div class="pl-3">
+                        <h5 class="text-white">Email</h5>
+                        <p>@x.Email</p>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <h4 class="fa fa-phone-alt text-primary"></h4>
+                    <div class="pl-3">
+                        <h5 class="text-white">Telefon</h5>
+                        <p>@x.Phone</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h3 class="text-primary mb-4">Linkler</h3>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-white mb-2" href="/Default/Index/"><i class="fa fa-angle-right mr-2"></i>Ana Sayfa</a>
+                    <a class="text-white mb-2" href="/Default/PartialAbout/"><i class="fa fa-angle-right mr-2"></i>Hakkımızda</a>
+                    <a class="text-white mb-2" href="/Default/PartialClassRooms/"><i class="fa fa-angle-right mr-2"></i>Sınıflarımız</a>
+                    <a class="text-white mb-2" href="/Default/PartialTeacher/"><i class="fa fa-angle-right mr-2"></i>Öğretmenlerimiz</a>
+                    <a class="text-white" href="/Contact/Index/"><i class="fa fa-angle-right mr-2"></i>Bizimle İletişime Geç</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h3 class="text-primary mb-4">Haritalar</h3>
+                <div class="map-w3ls">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d760.1540650027208!2d27.98982606957587!3d40.35085792026364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14b5d3b994e6b431%3A0xeaefb872bdff7e5!2zxLBoc2FuaXllLCA2MjUgU2suLCAxMDIwMCBCYW5kxLFybWEvQmFsxLFrZXNpcg!5e0!3m2!1str!2str!4v1709199539786!5m2!1str!2str"
+                            width="280" height="170" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+            </div>
+        </div>
+    }
+
+
+    <div class="container-fluid pt-5"
+         style="border-top: 1px solid rgba(23, 162, 184, 0.2) ;">
+        <p class="m-0 text-center text-white">
+            &copy;
+            <a class="text-primary font-weight-bold" href="#">KidKinder</a>.
+            Bütün Hakları Saklıdır.
+        </p>
+    </div>
+</div>

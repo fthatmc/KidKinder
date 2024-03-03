@@ -1,0 +1,69 @@
+﻿@model KidKinder.Entities.Feature
+
+@{
+    ViewBag.Title = "UpdateFeature";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+<div class="pcoded-inner-content">
+    <div class="main-body">
+        <div class="page-wrapper">
+            <div class="page-body">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <!-- Basic Form Inputs card start -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h5>Öne Çıkan Güncelle</h5>
+                                <span>Öne Çıkan Adresi ile ilgili verileri eksiksiz olarak doldurunuz.</span>
+                            </div>
+                            <div class="card-block">
+                                <form method="post">
+                                    <input type="hidden" name="FeatureId" value="@Model.FeatureId" class="form-control">
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label">Üst Başlık</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" name="Title" value="@Model.Title" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label">Alt Başlık</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" name="Header" value="@Model.Header" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label">Resim URL</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" name="ImageURL" value="@Model.ImageURL" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label">Açıklama</label>
+                                        <div class="col-sm-10">
+                                            <textarea rows="5" type="text" name="Description" class="form-control">@Model.Description</textarea>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-outline-success">Güncelle</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="styleSelector">
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+

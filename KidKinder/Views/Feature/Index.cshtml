@@ -1,0 +1,100 @@
+﻿@model List<KidKinder.Entities.Feature>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+
+<div class="page-header">
+    <div class="page-block">
+        <div class="row align-items-center">
+            <div class="col-md-8">
+                <div class="page-header-title">
+                    <h5 class="m-b-10">KidKinder Admin Paneli</h5>
+                    <p class="m-b-0">Uygulamanın yeni veri girişi, güncelleme, silme ve diğer işlemlerin yapıldığı sayfadır.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="index.html"> <i class="fa fa-home"></i> </a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="#!">Öne Çıkan Listesi</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="pcoded-inner-content">
+    <!-- Main-body start -->
+    <div class="main-body">
+        <div class="page-wrapper">
+            <!-- Page-body start -->
+            <div class="page-body">
+                <div class="card">
+                    <div class="card-header">
+                        <h5>Öne Çıkan Tablosu</h5>
+                        <span>Öne Çıkan ile İlgili İşlemleri Burdan Yapabilirsiniz</span>
+                        <div class="card-header-right">
+                            <ul class="list-unstyled card-option">
+                                <li><i class="fa fa fa-wrench open-card-option"></i></li>
+                                <li><i class="fa fa-window-maximize full-card"></i></li>
+                                <li><i class="fa fa-minus minimize-card"></i></li>
+                                <li><i class="fa fa-refresh reload-card"></i></li>
+                                <li><i class="fa fa-trash close-card"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-block table-border-style">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Sıra No</th>
+                                        <th>Üst Başlık</th>
+                                        <th>Alt Başlık</th>
+                                        <th>Resim</th>
+                                        <th>Açıklama</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @{int sirano = 0;}
+                                    @foreach (var x in Model)
+                                    {
+                                        <tr>
+                                            <td>@{sirano++;} @sirano</td>
+                                            <td>@x.Header</td>
+                                            <td>@x.Title</td>
+                                            <td><img src="@x.ImageURL" alt="user image" class="img-radius img-40 align-top m-r-15"></td>
+                                            <td>@x.Description</td>
+                                            <td>
+                                                <a style="width:100px;" class="btn btn-info btn-sm" href="/Feature/UpdateFeature/@x.FeatureId">
+
+                                                    Düzenle
+                                                </a>
+                                                <a class="btn btn-danger btn-sm" href="/Feature/DeleteFeature/@x.FeatureId">
+
+                                                    Sil
+                                                </a>
+
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                        <a href="/Feature/CreateFeature/" class="btn btn-primary">Yeni Öne Çıkan Ekle</a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+

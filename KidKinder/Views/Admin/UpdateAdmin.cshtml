@@ -1,0 +1,52 @@
+﻿@model KidKinder.Entities.Admin
+@{
+    ViewBag.Title = "UpdateAdmin";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+<div class="pcoded-inner-content">
+    <div class="main-body">
+        <div class="page-wrapper">
+            <div class="page-body">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5>Admin Güncelleme Sayfası</h5>
+                                <span>Admin ile ilgili verileri eksiksiz olarak doldurunuz.</span>
+                            </div>
+                            <div class="card-block">
+                                <form method="post">
+                                    <input type="hidden" name="AdminId" value="@Model.AdminId" class="form-control">
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label">Kullanıcı Adı</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" name="UserName" value="@Model.UserName" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label">Şifre</label>
+                                        <div class="col-sm-10">
+                                            <input type="password" name="Password" value="@Model.Password" class="form-control">
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-outline-success">Güncelle</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="styleSelector">
+
+    </div>
+</div>
+
+
+
+
+
+

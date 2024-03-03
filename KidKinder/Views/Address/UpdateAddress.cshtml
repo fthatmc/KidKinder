@@ -1,0 +1,67 @@
+﻿@model KidKinder.Entities.Address
+
+@{
+    ViewBag.Title = "UpdateAddress";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+<div class="pcoded-inner-content">
+    <div class="main-body">
+        <div class="page-wrapper">
+            <div class="page-body">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5>Adres Güncelleme</h5>
+                                <span>Adres ile ilgili verileri eksiksiz olarak doldurunuz.</span>
+                            </div>
+                            <div class="card-block">
+                                <form method="post">
+                                    <input type="hidden" name="AddressID" value="@Model.AddressID" class="form-control">
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label">Mail</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" name="Email" value="@Model.Email" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label">Telefon</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" name="Phone" value="@Model.Phone" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label">Açık Saatler</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" name="OpeningHours" value="@Model.OpeningHours" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label">Adres Detayı</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" name="AddressDetail" value="@Model.AddressDetail" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label">Açıklama</label>
+                                        <div class="col-sm-10">
+                                            <textarea rows="5" type="text" name="Description" class="form-control">@Model.Description</textarea>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-outline-info">Güncelle</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="styleSelector">
+
+    </div>
+</div>
+
+
