@@ -2,7 +2,7 @@
 
 ## Projenin Temel Amacı
 
-Anaokulumuz, ebeveynlerin çocuklarını istedikleri sınıfa kaydettirebilecekleri ve okulumuzun günlük faaliyetlerini kolayca takip edebilecekleri bir platform sunar.
+Bu proje bir anaokulu tanıtım sayfası olup, projede veliler çocukları için sınıf seçebilir ve kullanıcıya mesaj gönderebilirler. Kullanıcı tarafında ise Login Panelinden giriş yaparak bahse konu sayfa ile alakalı CRUD işlemleri yapabilir Dashboard da çeşitli istatistiklere erişebilirsiniz.
 
 ## Kullanılan Teknolojiler
 - Asp.Net
